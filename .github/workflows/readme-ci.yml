@@ -1,0 +1,14 @@
+name: readme-ci
+
+on:
+  schedule:
+    - cron: "23 7 * * 3"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scaffold status
+        run: |
+          echo "profile-readme-ci scaffold: the workflow interface is defined, and the verification engine is the next build step."
